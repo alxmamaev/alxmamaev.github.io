@@ -12120,7 +12120,7 @@ MEDIAN:87
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x6654870&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7b9b0f0&gt;</pre>
 </div>
 
 </div>
@@ -12791,7 +12791,7 @@ SUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x6e618d0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x803d150&gt;</pre>
 </div>
 
 </div>
@@ -14180,8 +14180,8 @@ ABEEQRAEweL+D/1FOB35iXEUAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2015</span> <span class="o">=</span> <span class="n">cities_statistic_2015</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2015</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">50</span><span class="p">]</span>
-<span class="n">holydays_2015</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2015</span> <span class="o">=</span> <span class="n">cities_statistic_2015</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2015</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">42</span><span class="p">]</span>
+<span class="n">holydays_2015</span>
 </pre></div>
 
 </div>
@@ -14193,46 +14193,6 @@ ABEEQRAEweL+D/1FOB35iXEUAAAAAElFTkSuQmCC
 
 
 <div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>orders    4
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>У нас осталось четыре подобных пика, просмотрим, что это за даты.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2015</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -14257,12 +14217,44 @@ dtype: int64</pre>
       <td>138.0</td>
     </tr>
     <tr>
+      <th>2015-03-01</th>
+      <td>135.0</td>
+    </tr>
+    <tr>
+      <th>2015-04-01</th>
+      <td>131.0</td>
+    </tr>
+    <tr>
+      <th>2015-06-03</th>
+      <td>134.0</td>
+    </tr>
+    <tr>
       <th>2015-08-03</th>
       <td>143.0</td>
     </tr>
     <tr>
+      <th>2015-09-05</th>
+      <td>130.0</td>
+    </tr>
+    <tr>
+      <th>2015-11-21</th>
+      <td>131.0</td>
+    </tr>
+    <tr>
+      <th>2015-11-28</th>
+      <td>130.5</td>
+    </tr>
+    <tr>
+      <th>2015-12-12</th>
+      <td>135.0</td>
+    </tr>
+    <tr>
       <th>2015-12-26</th>
       <td>155.0</td>
+    </tr>
+    <tr>
+      <th>2015-12-30</th>
+      <td>134.0</td>
     </tr>
   </tbody>
 </table>
@@ -14280,13 +14272,13 @@ dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Опа! Кажется мы нашли то, что нужно. Мы выявили соедующие праздники:</p>
+<p>Хмм, похоже мы нашли следующую закономерность:</p>
 <ul>
-<li>Первым делом новый год - пожалуй самый празднуемый праздник в России, здесь комментарии излишни</li>
-<li>Понятное дело - первое сентября, день знаний. В этот день все родители ведут детей на праздник, ну или же сами дети идут <em>отмечать</em></li>
-<li>Интересно, то что здесь есть восьмое марта, но нет 23 Февраля :D. Думаю, что здесь тоже понятно, кто кого куда ведет</li>
-<li>Погодите... первое февраля? Какой в этот день праздник то? Есть предположение, что это связано с первой зарплатой после января. Случайность это или закономерность мы сможем узнать, сравнив в прошлым годом.</li>
+<li>Значительно продажи усиливаются в новогоднее время, а именно с конца ноября (21-28), до конца новогодних каникул (9 января)</li>
+<li>Помимо нового года праздники отсутсвуют</li>
+<li>Однако, можно заметить, что продажи резко возрастают в первых числах месяца (3-5), связано это в первую очередь с выдачей зарплаты.</li>
 </ul>
+<p>Чтобы убедится, что более нет значимых дат для Россиян в которые они начинают скупать пиццу, давайте просмотрим статистику за 2014, 2013 и 2016 год</p>
 
 </div>
 </div>
@@ -14302,7 +14294,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities_statistic_2014</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">train</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2014</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -14317,11 +14309,11 @@ dtype: int64</pre>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x6fa0ef0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x804fdd0&gt;</pre>
 </div>
 
 </div>
@@ -15427,9 +15419,19 @@ AElFTkSuQmCC
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Здесь мы так же, видим ежемесячное повышение продаж, но так же заметно огромное колличество шума ввиде множества других пиков. Давайте взглянем на них.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2014</span> <span class="o">=</span> <span class="n">cities_statistic_2014</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2014</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">50</span><span class="p">]</span>
@@ -15444,7 +15446,7 @@ AElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -15528,83 +15530,22 @@ AElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Стало еще интересней. Количество праздников в 2014 болше чем в 2015. 
-Похоже тогда кризис нам был не страшен, поэтому повысим коэффициент уникальности.</p>
+<p>Как мы видим, стуация немного отличается, а именно помимо ежемесячного увеличения продаж есть и другие праздники:</p>
+<ul>
+<li>День святого валентина</li>
+<li>23 февраля
+Ну и в принципе заметна большая активность людей. однако мы не видим празднование новгого года, связано все это в первую очередь с обвалившейся ценой на нефть в декабре 2014 года. Отсюда понятна меньшая активность людей в 2015 году.</li>
+</ul>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2014</span> <span class="o">=</span> <span class="n">cities_statistic_2014</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2014</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">70</span><span class="p">]</span>
-<span class="n">holydays_2014</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orders</th>
-    </tr>
-    <tr>
-      <th>date</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2014-01-09</th>
-      <td>183.0</td>
-    </tr>
-    <tr>
-      <th>2014-02-14</th>
-      <td>173.0</td>
-    </tr>
-    <tr>
-      <th>2014-07-03</th>
-      <td>192.0</td>
-    </tr>
-    <tr>
-      <th>2014-08-03</th>
-      <td>245.0</td>
-    </tr>
-    <tr>
-      <th>2014-09-03</th>
-      <td>157.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Здесь уже больше похоже на истину. Похоже, что деньги на новый год 2015 кончились, однако активно праздновалось восьмое марта (3 дня) и первое сентября.
-Для достоверности просмотрим данные за 2013 год.</p>
+<p>Теперь просмотрим 2013 год и удостоверимся в нашей теории.</p>
 
 </div>
 </div>
@@ -15620,7 +15561,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities_statistic_2013</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">train</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2013</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -15635,11 +15576,11 @@ AElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x6ec8050&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x80d7670&gt;</pre>
 </div>
 
 </div>
@@ -16836,12 +16777,22 @@ eEcBCCGEEEJ4RwEIIYQQQnhHAQghhBBCePc/P/T2CCTxXz4AAAAASUVORK5CYII=
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Замечаем, что в принципе средние закупки ниже чем в 2014 году, скоре всего в это время пицца еще не так сильно вошла в обиход людей. Однако активность покупателей остается высокой.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2013</span> <span class="o">=</span> <span class="n">cities_statistic_2013</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2013</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">50</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2013</span> <span class="o">=</span> <span class="n">cities_statistic_2013</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2013</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">35</span><span class="p">]</span>
 <span class="n">holydays_2013</span>
 </pre></div>
 
@@ -16870,8 +16821,32 @@ eEcBCCGEEEJ4RwEIIYQQQnhHAQghhBBCePc/P/T2CCTxXz4AAAAASUVORK5CYII=
   </thead>
   <tbody>
     <tr>
+      <th>2013-02-22</th>
+      <td>134.0</td>
+    </tr>
+    <tr>
+      <th>2013-04-13</th>
+      <td>126.0</td>
+    </tr>
+    <tr>
       <th>2013-07-03</th>
       <td>175.0</td>
+    </tr>
+    <tr>
+      <th>2013-07-12</th>
+      <td>123.0</td>
+    </tr>
+    <tr>
+      <th>2013-11-16</th>
+      <td>127.0</td>
+    </tr>
+    <tr>
+      <th>2013-11-30</th>
+      <td>132.0</td>
+    </tr>
+    <tr>
+      <th>2013-12-13</th>
+      <td>125.0</td>
     </tr>
     <tr>
       <th>2013-12-14</th>
@@ -16901,7 +16876,8 @@ eEcBCCGEEEJ4RwEIIYQQQnhHAQghhBBCePc/P/T2CCTxXz4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Здесь наблюдается инетересная тенденция, положе на этот пицца не так сильно вошла в обиход обычных людей. В связи с чем спрос в новый год не так выражен, а первое сентября  вобще отсутсвует. Однако спрос увеличивается к восьмому марта, так как пиццерия удобное место для молодой пары. Но неожиданная активность в августе остается загадкой.</p>
+<p>Здесь мы замечаем, что тенденция закупки в начале месяца отсутсвует. Причина описывалась ранее - пицца не вошла в обиход. 
+Список праздников остается примерно таким же.</p>
 
 </div>
 </div>
@@ -16911,7 +16887,7 @@ eEcBCCGEEEJ4RwEIIYQQQnhHAQghhBBCePc/P/T2CCTxXz4AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Из этого мы выяснили, что за 3 года отношение к пицце как к блюду изменилось, и для установки точных <em>пиков</em> активности, стоит провести анализ текущего года</p>
+<p>Из этого мы выяснили, что за 3 года отношение к пицце как к блюду изменилось, и для установки точных <em>пиков</em> активностии на текущий момент стоит провести анализ текущего года</p>
 
 </div>
 </div>
@@ -16946,7 +16922,7 @@ eEcBCCGEEEJ4RwEIIYQQQnhHAQghhBBCePc/P/T2CCTxXz4AAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x6f358f0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x80e0290&gt;</pre>
 </div>
 
 </div>
@@ -18269,10 +18245,10 @@ QRAEQRAcTgQggiAIgiA43P8BBt7mzv6fBfMAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2016</span> <span class="o">=</span> <span class="n">cities_statistic_2016</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2016</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">70</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">holydays_2016</span> <span class="o">=</span> <span class="n">cities_statistic_2016</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cities_statistic_2016</span><span class="o">.</span><span class="n">orders</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="o">+</span><span class="mi">50</span><span class="p">]</span>
 <span class="n">holydays_2016</span>
 </pre></div>
 
@@ -18284,7 +18260,7 @@ QRAEQRAcTgQggiAIgiA43P8BBt7mzv6fBfMAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -18305,12 +18281,60 @@ QRAEQRAcTgQggiAIgiA43P8BBt7mzv6fBfMAAAAASUVORK5CYII=
       <td>175.0</td>
     </tr>
     <tr>
+      <th>2016-01-10</th>
+      <td>145.0</td>
+    </tr>
+    <tr>
+      <th>2016-02-13</th>
+      <td>140.0</td>
+    </tr>
+    <tr>
       <th>2016-02-14</th>
       <td>173.0</td>
     </tr>
     <tr>
+      <th>2016-02-20</th>
+      <td>145.0</td>
+    </tr>
+    <tr>
+      <th>2016-02-21</th>
+      <td>142.0</td>
+    </tr>
+    <tr>
+      <th>2016-02-23</th>
+      <td>145.0</td>
+    </tr>
+    <tr>
+      <th>2016-05-03</th>
+      <td>149.0</td>
+    </tr>
+    <tr>
       <th>2016-08-03</th>
       <td>157.0</td>
+    </tr>
+    <tr>
+      <th>2016-08-10</th>
+      <td>147.5</td>
+    </tr>
+    <tr>
+      <th>2016-09-17</th>
+      <td>150.0</td>
+    </tr>
+    <tr>
+      <th>2016-09-24</th>
+      <td>148.0</td>
+    </tr>
+    <tr>
+      <th>2016-10-09</th>
+      <td>138.0</td>
+    </tr>
+    <tr>
+      <th>2016-10-15</th>
+      <td>151.0</td>
+    </tr>
+    <tr>
+      <th>2016-12-06</th>
+      <td>137.0</td>
     </tr>
   </tbody>
 </table>
@@ -18328,7 +18352,12 @@ QRAEQRAcTgQggiAIgiA43P8BBt7mzv6fBfMAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Пожалуй теперь картинка полностью ясна, поскольку иы опять замечаем повторение праздничных дат.</p>
+<p>Как видим, статистика несколько лучше чем в 2015 году (экономическая обстановка устоялась). Поэтому кроме ежемесячных закупок присутствуют и праздники:</p>
+<ul>
+<li>Новый год</li>
+<li>День святого валентина</li>
+<li>23 февраля</li>
+</ul>
 
 </div>
 </div>
@@ -18347,12 +18376,26 @@ QRAEQRAcTgQggiAIgiA43P8BBt7mzv6fBfMAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>В итоге мы получили следующий перечень вжных дат:</p>
+<p>В итоге мы выяснили следующее:</p>
 <ul>
-<li><strong>30 декабря - 2 января</strong> - Новый год</li>
-<li><strong>14 февраля</strong> - День святого Валентина</li>
-<li><strong>7-8 марта</strong> - День женщин</li>
-<li><strong>1 сентября</strong> - День знаний</li>
+<li>Продажи увеличиваются в перавые числа месяца (3-5)</li>
+<li>Существуют праздники перво значимости - новый год (28 ноября - 9 января)</li>
+<li>Сущестувуют праздники второй значимости - 23 февраля, день женщин, день святого валентина</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>В связи с этим мы добавим в датасет следующие параметры:</p>
+<ul>
+<li>Булевый параметр указывающий, то первые ли сейчас числа месяца</li>
+<li>Булевый параметр указывающий, сейчас ли праздничный день</li>
+<li>Числовой параметр указывающий растояние до нового года (больше нуля, когда дата находится в диапазоне от 28 ноября по 9 января)</li>
 </ul>
 
 </div>
