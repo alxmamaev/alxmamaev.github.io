@@ -1,0 +1,33 @@
+#menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background: #fff;
+	margin-top: 0;
+
+
+	li:first-child {
+		padding-top: 10px;
+	}
+
+	
+	li {
+		border-bottom: 0px solid $main-color;
+		
+		a {
+			color: $main-color;
+		}
+		
+		&.active {
+			border-bottom: 2px solid $main-color;
+		}
+	}
+}
+
+#slide-out {
+	li {
+		text-transform: uppercase;
+	}
+}

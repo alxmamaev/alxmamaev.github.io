@@ -1,132 +1,179 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<meta name="yandex-verification" content="eff0f58c5407de6d" />
-		<title>Мамаев Александр</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body id="top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>alxmamaev</title>
 
-		<!-- Header -->
-			<header id="header">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-				<h1><strong>Mamaev Alexander</strong></h1>
-				<h1>python developer</h1>
-				<h1>Machine Learning Junior</h1>
-			</header>
+	<meta name="author" content="Alexander Mamaev alxmamaev"/>
+	<meta name="description" content=""/>
+	<meta name="keywords"  content=""/>
 
-		<!-- Main -->
-			<div id="main">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-				<!-- One -->
-					<section id="description">
-						<header class="major">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.css">
+	<link rel="stylesheet" href="bower_components/fullpage.js/dist/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<script id="template" type="text/x-handlebars-template">
+		<ul id="menu" class="tabs row">
+			<li class="col s2 tab hide-on-med-and-up">
+				<a href="#" data-activates="slide-out" class="button-collapse">
+					<i class="material-icons">menu</i>
+				</a>
+			</li>
+			<li data-menuanchor="main-section" class="tab col s2 active hide-on-small-only">
+				<a href="#main-section" class="waves-effect">{{menu.[0]}}</a>
+			</li>
+			<li data-menuanchor="about-section" class="tab col s2 hide-on-small-only">
+				<a href="#about-section" class="waves-effect">{{menu.[1]}}</a>
+			</li>
+			<li data-menuanchor="works-section" class="tab col s2 hide-on-small-only">
+				<a href="#works-section" class="waves-effect">{{menu.[2]}}</a>
+			</li>
+			<li data-menuanchor="skills-section" class="tab col s2 hide-on-small-only">
+				<a href="#skills-section" class="waves-effect">{{menu.[3]}}</a>
+			</li>
+			<li data-menuanchor="achievements-section" class="tab col s2 hide-on-small-only">
+				<a href="#achievements-section" class="waves-effect">{{menu.[4]}}</a>
+			</li>
+			<li data-menuanchor="projects-section" class="tab col s2 hide-on-small-only">
+				<a href="#projects-section" class="waves-effect">{{menu.[5]}}</a>
+			</li>
+		</ul>
+			
+		<ul id="slide-out" class="side-nav">
+			<li data-menuanchor="main-section">
+				<a href="#main-section" class="waves-effect">{{menu.[0]}}</a>
+			</li>
+			<li data-menuanchor="about-section">
+				<a href="#about-section" class="waves-effect">{{menu.[1]}}</a>
+			</li>
+			<li data-menuanchor="works-section">
+				<a href="#works-section" class="waves-effect">{{menu.[2]}}</a>
+			</li>
+			<li data-menuanchor="skills-section">
+				<a href="#skills-section" class="waves-effect">{{menu.[3]}}</a>
+			</li>
+			<li data-menuanchor="achievements-section">
+				<a href="#achievements-section" class="waves-effect">{{menu.[4]}}</a>
+			</li>
+			<li data-menuanchor="projects-section">
+				<a href="#projects-section" class="waves-effect">{{menu.[5]}}</a>
+			</li>
+	    </ul>
 
-							<h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Немного о себе:</h2>
-						</header>
-						Привет, меня зовут Александр и здесь я кратко опишу то, чем я занимаюсь.
-							Родился в городе Златоуст(Челябинская область), в данный момент проживаю в Челябинск.
-							Основное образование получаю в Челябинском Областном Многопрофильном Лицее-Интернате, 
-							но помимо него посещаю множество дополнительных мест, такие как (ЮУрГУ, IT-школа Samsung, Уральское сообщество Машинного Обучения, а также многое другое)<br>
-							Мои увлечения в основном связаны с IT и Техническим направлениями, например: 
-						
-						<ul>
-							<li> Разработка веб-приложений (Flask)</li>
-							<li> Разработка telegram ботов</li>
-							<li> Разработка устройств на базе микроконтроллеров</li>
-							<li> Анализ данных и построение предсказательных моделей по ним (Машинное обучение)</li>
-						</ul> 
-						
-						Так же я занимаюсь написанием технических статей для сайта <a href = "cxem.net">Паяльник</a>, подготавливаю уроки-лекции для <a href = "https://vk.com/iotlaboratory">Челябинской Лаборатории Интернета Вещей</a> (организованна компанией <a href = "napoleonit.ru">NapoleonIT</a>), разрабатываю opensource проекты, о которых вы можете прочитать далее. 
-						Надеюсь вам будет интересно :D
-						
-					</section>
-
-					<section id="programs">
-						<h2><i class="fa fa-code" aria-hidden="true"></i> Проекты:</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Электронная система учета посетителей</h3>
-								<p>Данная система позволит автоматизировать учет посетителей в организации/заведении/предприятии.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Rifmator Engine</h3>
-								<p>Rifmator Engine - небольшой модуль для язка python, позволяющий искать рифмы к русским словам.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Doglang</h3>
-								<p>Doglang - язык программирования, для собак основанный на стековой машине.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Forko</h3>
-								<p>Forko - Интелектуальная система поиска мест общественного питания в городе, формирующая поисковую выдачу на основе предпочтений пользователя.</p>
-							</article>
+		<main id="fullpage">
+			<section id="main" data-anchor="main-section" class="section full-image" style="background-image: url(img/main.jpg)">
+				<div class="container">
+					<div class="row">
+						<div class="col offset-s1 s8 offset-m5 m6  l5 offset-l7">
+							<h2>{{main.label}}</h2>
+							<div class="md flow-text">
+								{{#markdown main.description}}{{/markdown}}
+							</div>
+							
+							
+							<div class="contacts flow-text">
+								{{#main.contacts}}
+									<a href="{{link}}">
+										<i class="fa fa-{{icon}}"></i>
+									</a>
+								{{/main.contacts}}
+							</div>
 						</div>
-						<ul class="actions">
-							<li><a href="https://github.com/alxmamaev?tab=repositories" class="button">Все проекты</a></li>
-						</ul>
-					</section>
-					
+					</div>
+				</div>
+			</section>
+			<section id="about" data-anchor="about-section" class="section full-image" style="background-image: url(img/bg.jpg);">
+				<div class="container">
+					<h1 class="header">{{about.label}}</h1>
+					<div class="md flow-text">
+						{{#markdown about.description}}{{/markdown}}
+					</div>
+				</div>
+			</section>
+			<section id="works" data-anchor="works-section" class="section full-image" style="background-image: url(img/bg.jpg);">
+				<div class="container">
+					<h1 class="header">{{works.label}}</h1>
+					<div class="owl-carousel">
+						{{#works.list}}
+							<div class="item company center-align">
+								<img class="circle company-logo" src="{{img}}" alt="{{label}}">
+								<h1 class="company-label center-align">{{label}}</h1>
+								<div class="md company-description">
+									{{#markdown description}}{{/markdown}}
+								</div> 
+								<a class="waves-effect waves-light btn center-align blue lighten-1" href="{{link}}">
+									{{linkLabel}}
+									<i class="material-icons right">open_in_browser</i>
+								</a>
+							</div>
+						{{/works.list}}
+					</div>
+				</div>
+			</section>
+			<section id="skills" data-anchor="skills-section" class="section full-image" style="background-image: url(img/bg.jpg);">
+				<div class="container">
+					<h1 class="header">{{skills.label}}</h1>
+					<div class="owl-carousel">
+						{{#skills.list}}
+							<div class="item skill center-align">
+								<img src="{{img}}" alt="{{label}}">	
+								<h1>{{label}}</h1>
+							</div>
+						{{/skills.list}}
+					</div>
+					<div class="md flow-text">
+						{{#markdown skills.description}}{{/markdown}}
+					</div>
+				</div>
+			</section>
+			<section id="achievements" data-anchor="achievements-section" class="section full-image" style="background-image: url(img/bg.jpg);">
+				<div class="container">
+					<h1 class="header">{{achievements.label}}</h1>
+					<div class="owl-carousel">
+						{{#achievements.list}}
+							<div class="item achievements center-align">
+								<div class="achievement-cup">
+									<i class="fa fa-trophy" aria-hidden="true"></i>
+								</div>
+								<h1 class="achievement-label center-align">{{label}}</h1>
+								<div class="md achievement-description">
+									{{#markdown description}}{{/markdown}}
+								</div> 
+							</div>
+						{{/achievements.list}}
+					</div>
+				</div>
+			</section>
+			<section id="projects" data-anchor="projects-section" class="section">
+				<div class="owl-carousel">
+					{{#projects}}
+						<div class="item project" href="project-{{@index}}">
+							<div class="full-image" style="background-image: url({{img}});"></div>
+							<div class="container">
+								<h1 class="header">{{label}}</h1>
+								<div class="md flow-text">
+									{{#markdown description}}{{/markdown}}
+								</div>
+								<a class="waves-effect waves-light btn center-align blue lighten-1" href="{{link}}">
+									{{linkLabel}}
+									<i class="material-icons right">open_in_browser</i>
+								</a>
+							</div>
+						</div>
+					{{/projects}}
+				</div>
+			</section>
+		</main>
+	</script>
 
-										<section id="skils">
-						<h2><i class="fa fa-check-circle" aria-hidden="true"></i> Умения:</h2>
-						<ul>
-							<li>Python3</li>
-							<li>SkitLearn</li>
-							<li>Pandas</li>
-						 	<li>Разработка backend для сайтов на Flask</li>
-						 	<li>Разработка ботов для Telegram</li>
-							<li>Пайка, схемотехника</li>
-							 <li>Разработка устройств на базе микроконтроллеров</li>
-							 <li>Программирование микроконтроллеров</li>
-						</ul>
-					</section>
-					<section id="honors">
-						<h2><i class="fa fa-star" aria-hidden="true"></i> Награды:</h2>
-						<ul>
-						    	<li><h4>Хакатон OpenData74 (2016) - 1 место</h4></li>
-							<li><h4>Шаг в будущее (Область 2016) - 1 место</h4></li>
-							<li><h4>Аэро-Космический чемпионат (Область 2016) - 2 место</h4></li>
-							<li><h4>Городской конкурс радиолюбителей (Город 2016) - 2 место</h4></li>
-							<li><h4>Хакатон по анализу данных ДоДо Пицца - 3 место</h4></li>
-							<li><h4>Шаг в будущее (Россия 2016) - 3 место</h4></li>
-						</ul>
-					</section>
-
-
-			</div>
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://twitter.com/alxmamaev" class="icon fa-twitter" target = "_blank"><span class="label">Twitter</span></a></li>
-					<li><a href="https://vk.com/alxmamaev" class="icon fa-vk" target = "_blank"><span class="label" >VK</span></a></li>
-					<li><a href="https://facebook.com/alxmamaev" class="icon fa-facebook" target = "_blank"><span class="label">Facebook</span></a></li>
-					<li><a href="https://telegram.me/alxmamaev" class="icon fa-paper-plane-o" target = "_blank"><span class="label">Telegram</span></a></li>
-					<li><a href="https://github.com/alxmamaev" class="icon fa-github" target = "_blank"><span class="label">Github</span></a></li>
-					<li><a href="mailto:alxmamaev@ya.ru" class="icon fa-envelope-o" target = "_blank"><span class="label">Email</span></a></li>
-				</ul>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+	<script src="bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
+	<script src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
+	<script src="index.js"></script>
+</body>
 </html>

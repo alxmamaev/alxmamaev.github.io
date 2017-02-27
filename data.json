@@ -1,0 +1,333 @@
+{
+	"ru": {
+		"menu": ["главная", "обо мне", "работа", "навыки", "достижения", "мои проекты"],
+		"main": {
+			"label": "Александр Мамаев U+1F601",
+			"description": [
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit sunt, odio autem quisquam nemo, temporibus, nulla est ad error inventore accusamus sequi hic asperiores maiores vitae iure ab iste!"
+			],
+			"contacts": [
+				{
+					"link": "vk...",
+					"icon": "vk"
+				},
+				{
+					"link": "tg...",
+					"icon": "telegram"
+				},
+				{
+					"link": "vk...",
+					"icon": "facebook"
+				},
+				{
+					"link": "vk...",
+					"icon": "envelope-o"
+				},				
+				{
+					"link": "vk...",
+					"icon": "github"
+				},
+				{
+					"link": "vk...",
+					"icon": "twitter"
+				}
+			]
+		},
+
+		"about": {
+			"label": "ОБО МНЕ:",
+			"img": "img/avatar.jpg",
+			"description": [
+				"Привет, меня зовут Александр и здесь я кратко опишу то, чем я занимаюсь.",
+				"",
+				"Родился в городе Златоуст(Челябинская область), в данный момент проживаю в Челябинск. Основное образование получаю в Челябинском Областном Многопрофильном Лицее-Интернате, но помимо него посещаю множество дополнительных мест, такие как (ЮУрГУ, IT-школа Samsung, Уральское сообщество Машинного Обучения, а также многое другое)",
+				"Мои увлечения в основном связаны с IT и Техническим направлениями, например:",
+				"",
+				"* Разработка веб-приложений (Flask)",
+				"* Разработка telegram ботов",
+				"* Разработка устройств на базе микроконтроллеров",
+				"* Анализ данных и построение предсказательных моделей по ним (Машинное обучение)",
+				"",
+				"Так же я занимаюсь написанием технических статей для сайта [Паяльник](cxem.net), подготавливаю уроки-лекции для [Челябинской Лаборатории Интернета Вещей](https://vk.com/iotlaboratory) (организованна компанией [NapoleonIT](napoleonit.ru]), разрабатываю opensource проекты, о которых вы можете прочитать далее.",
+				"",
+				"Надеюсь вам будет интересно :D"
+			]
+		},
+		"works": {
+			"label": "ГДЕ Я РАБОТАЮ:",
+			"company": [
+				{
+					"img": "img/sheldon.jpg",
+					"label": "Sheldon AI",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					],
+					"linkLabel": "OFFICIAL SITE",
+					"link": "example.com"
+				},
+				{
+					"img": "img/napoleonit.jpg",
+					"label": "Napoleonit",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					],
+					"linkLabel": "OFFICIAL SITE",
+					"link": "example.com"
+				},
+				{
+					"img": "img/basis.png",
+					"label": "Basis",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					],
+					"linkLabel": "офф сайта нет (",
+					"link": "example.com"
+				}
+			]
+		},
+
+		"skills": {
+			"label": "МОИ НАВЫКИ:",
+			"list": [
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+								{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+								{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				}
+			],
+			"description": [
+				"> Я могу дохуя чего, вот че ты хочешь? Я все могу, пидор.",
+				"",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi asperiores, aliquam tempora nulla ducimus excepturi, nostrum quam dolor saepe error."
+			]
+		},
+		"achievements": {
+			"label": "MY ACHIEVEMENTS:"
+		},
+		"projects": [
+			{
+				"img": "img/leonardo.png",
+				"label": "Leonard Bot",
+				"description": [
+					"**Leonard Bot** - virtual assistant in messengers. Imagine your personal assistant who can create reminders, save notes, get taxi, search interesting place, explain you some things. It's Leonard."
+				],
+				"link": "github",
+				"linkLabel": "TELEGRAM"
+			},
+			{
+				"img": "img/leonardo.png",
+				"label": "Электронная система учета посетителей",
+				"description": [
+					"**Электронная система учета посетителей** - это совокупность программно аппаратных средств, главной задачей которых является - учет посещений какой либо организации или заведения в электронном виде."
+				],
+				"link": "github",
+				"linkLabel": "github"
+			}
+		]
+	},
+	"en": {
+		"menu": ["main", "about", "works", "skills", "achievements", "projects"],
+		"main": {
+			"label": "Alexander Mamaev",
+			"description": [
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora suscipit sunt, odio autem quisquam nemo, temporibus, nulla est ad error inventore accusamus sequi hic asperiores maiores vitae iure ab iste!"
+			],
+			"contacts": [
+				{
+					"link": "vk...",
+					"icon": "vk"
+				},
+				{
+					"link": "tg...",
+					"icon": "telegram"
+				},
+				{
+					"link": "vk...",
+					"icon": "facebook"
+				},
+				{
+					"link": "vk...",
+					"icon": "envelope-o"
+				},				
+				{
+					"link": "vk...",
+					"icon": "github"
+				},
+				{
+					"link": "vk...",
+					"icon": "twitter"
+				}
+			]
+		},
+
+		"about": {
+			"label": "ОБО МНЕ:",
+			"img": "img/avatar.jpg",
+			"description": [
+				"Привет, меня зовут Александр и здесь я кратко опишу то, чем я занимаюсь.",
+				"",
+				"Родился в городе Златоуст(Челябинская область), в данный момент проживаю в Челябинск. Основное образование получаю в Челябинском Областном Многопрофильном Лицее-Интернате, но помимо него посещаю множество дополнительных мест, такие как (ЮУрГУ, IT-школа Samsung, Уральское сообщество Машинного Обучения, а также многое другое)",
+				"Мои увлечения в основном связаны с IT и Техническим направлениями, например:",
+				"",
+				"* Разработка веб-приложений (Flask)",
+				"* Разработка telegram ботов",
+				"* Разработка устройств на базе микроконтроллеров",
+				"* Анализ данных и построение предсказательных моделей по ним (Машинное обучение)",
+				"",
+				"Так же я занимаюсь написанием технических статей для сайта [Паяльник](cxem.net), подготавливаю уроки-лекции для [Челябинской Лаборатории Интернета Вещей](https://vk.com/iotlaboratory) (организованна компанией [NapoleonIT](napoleonit.ru]), разрабатываю opensource проекты, о которых вы можете прочитать далее.",
+				"",
+				"Надеюсь вам будет интересно :D"
+			]
+		},
+		"works": {
+			"label": "ГДЕ Я РАБОТАЮ:",
+			"list": [
+				{
+					"img": "img/sheldon.jpg",
+					"label": "Sheldon AI",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					],
+					"linkLabel": "OFFICIAL SITE",
+					"link": "example.com"
+				},
+				{
+					"img": "img/napoleonit.jpg",
+					"label": "Napoleonit",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					],
+					"linkLabel": "OFFICIAL SITE",
+					"link": "example.com"
+				},
+				{
+					"img": "img/basis.png",
+					"label": "Basis",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					],
+					"linkLabel": "офф сайта нет (",
+					"link": "example.com"
+				},
+				{
+					"img": "img/itschool.jpg",
+					"label": "IT School",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					],
+					"linkLabel": "OFFICIAL SITE",
+					"link": "example.com"
+				}
+			]
+		},
+
+		"skills": {
+			"label": "МОИ НАВЫКИ:",
+			"list": [
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+								{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				},
+				{
+					"img": "img/python.png",
+					"label": "Python"
+				}
+			],
+			"description": [
+				"> Я могу дохуя чего, вот че ты хочешь? Я все могу, пидор.",
+				"",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi libero consequatur sapiente molestiae reprehenderit quae ut commodi odio ea tempore.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum aut distinctio, autem dolorem excepturi voluptate soluta ducimus aliquid vitae voluptatibus.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi asperiores, aliquam tempora nulla ducimus excepturi, nostrum quam dolor saepe error."
+			]
+		},
+		"achievements": {
+			"label": "MY ACHIEVEMENTS:",
+			"list": [
+				{
+					"label": "Хиккатон №99",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					]
+				}
+			]
+		},
+		"projects": [
+			{
+				"img": "img/leonardo.png",
+				"label": "Leonard Bot",
+				"description": [
+					"**Leonard Bot** - virtual assistant in messengers. Imagine your personal assistant who can create reminders, save notes, get taxi, search interesting place, explain you some things. It's Leonard.",
+					"",
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ratione, eos nulla officiis, rerum eveniet sunt accusantium eius veritatis consectetur dolor ullam! Error voluptatum dicta repellat dolore ad facilis dolor!",
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, tempora eum sed. Voluptatum dolorem tempora dolore iure maxime consequuntur dignissimos recusandae assumenda, nostrum molestias explicabo odio exercitationem tempore vel. Deserunt quas aspernatur non optio hic! Tenetur architecto est labore deserunt!"
+				],
+				"link": "github",
+				"linkLabel": "TELEGRAM"
+			},
+			{
+				"img": "img/leonardo.png",
+				"label": "Электронная система учета посетителей",
+				"description": [
+					"**Электронная система учета посетителей** - это совокупность программно аппаратных средств, главной задачей которых является - учет посещений какой либо организации или заведения в электронном виде.",
+					"",
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ratione, eos nulla officiis, rerum eveniet sunt accusantium eius veritatis consectetur dolor ullam! Error voluptatum dicta repellat dolore ad facilis dolor!",
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, tempora eum sed. Voluptatum dolorem tempora dolore iure maxime consequuntur dignissimos recusandae assumenda, nostrum molestias explicabo odio exercitationem tempore vel. Deserunt quas aspernatur non optio hic! Tenetur architecto est labore deserunt!"
+				],
+				"link": "github",
+				"linkLabel": "github"
+			}
+		]
+	}
+}

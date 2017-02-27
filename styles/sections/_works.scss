@@ -1,0 +1,23 @@
+#works {
+	.header {
+		margin-bottom: 5%;
+	}
+	.company-logo {
+		margin-top: 50px;
+		display: block;
+		margin: auto;
+		width: 60%;
+		height: 60%;
+		border: 4px solid $main-color;
+	}
+	.company-label {
+		font-size: 2em;
+		font-weight: 200px;
+		color: #616161;
+	}
+	.company-description {
+		font-size: 1.5em;
+		font-weight: 200;
+	}
+
+}
