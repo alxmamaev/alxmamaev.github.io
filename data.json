@@ -129,7 +129,23 @@
 			]
 		},
 		"achievements": {
-			"label": "MY ACHIEVEMENTS:"
+			"label": "MY ACHIEVEMENTS:",
+			"list": [
+				{
+					"label": "Хиккатон №99",
+					"color": "#54A3FF",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					]
+				},
+				{
+					"label": "Хиккатон №99",
+					"color": "#ccc",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					]
+				}
+			]
 		},
 		"projects": [
 			{
@@ -297,6 +313,14 @@
 			"list": [
 				{
 					"label": "Хиккатон №99",
+					"color": "#54A3FF",
+					"description": [
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+					]
+				},
+				{
+					"label": "Хиккатон №99",
+					"color": "#ccc",
 					"description": [
 						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
 					]
