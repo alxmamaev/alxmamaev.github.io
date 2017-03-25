@@ -15,24 +15,52 @@
 </head>
 <body>
 	<script id="template" type="text/x-handlebars-template">
-		<ul id="menu" class="tabs">
-			<li data-menuanchor="main-section" class="tab col s3 active">
-				<a href="#main-section">{{menu.[0]}}</a>
+		<ul id="menu" class="tabs row">
+			<li class="col s2 tab hide-on-med-and-up">
+				<a href="#" data-activates="slide-out" class="button-collapse">
+					<i class="material-icons">menu</i>
+				</a>
 			</li>
-			<li data-menuanchor="about-section" class="tab col s3">
-				<a href="#about-section">{{menu.[1]}}</a>
+			<li data-menuanchor="main-section" class="tab col s2 active hide-on-small-only">
+				<a href="#main-section" class="waves-effect">{{menu.[0]}}</a>
 			</li>
-			<li data-menuanchor="works-section" class="tab col s3">
-				<a href="#works-section">{{menu.[2]}}</a>
+			<li data-menuanchor="about-section" class="tab col s2 hide-on-small-only">
+				<a href="#about-section" class="waves-effect">{{menu.[1]}}</a>
 			</li>
-			<li data-menuanchor="skills-section" class="tab col s3">
-				<a href="#skills-section">{{menu.[3]}}</a>
+			<li data-menuanchor="works-section" class="tab col s2 hide-on-small-only">
+				<a href="#works-section" class="waves-effect">{{menu.[2]}}</a>
 			</li>
-			<li data-menuanchor="projects-section" class="tab col s3">
-				<a href="#projects-section">{{menu.[4]}}</a>
+			<li data-menuanchor="skills-section" class="tab col s2 hide-on-small-only">
+				<a href="#skills-section" class="waves-effect">{{menu.[3]}}</a>
+			</li>
+			<li data-menuanchor="achievements-section" class="tab col s2 hide-on-small-only">
+				<a href="#achievements-section" class="waves-effect">{{menu.[4]}}</a>
+			</li>
+			<li data-menuanchor="projects-section" class="tab col s2 hide-on-small-only">
+				<a href="#projects-section" class="waves-effect">{{menu.[5]}}</a>
 			</li>
 		</ul>
 			
+		<ul id="slide-out" class="side-nav">
+			<li data-menuanchor="main-section">
+				<a href="#main-section" class="waves-effect">{{menu.[0]}}</a>
+			</li>
+			<li data-menuanchor="about-section">
+				<a href="#about-section" class="waves-effect">{{menu.[1]}}</a>
+			</li>
+			<li data-menuanchor="works-section">
+				<a href="#works-section" class="waves-effect">{{menu.[2]}}</a>
+			</li>
+			<li data-menuanchor="skills-section">
+				<a href="#skills-section" class="waves-effect">{{menu.[3]}}</a>
+			</li>
+			<li data-menuanchor="achievements-section">
+				<a href="#achievements-section" class="waves-effect">{{menu.[4]}}</a>
+			</li>
+			<li data-menuanchor="projects-section">
+				<a href="#projects-section" class="waves-effect">{{menu.[5]}}</a>
+			</li>
+	    </ul>
 
 		<main id="fullpage">
 			<section id="main" data-anchor="main-section" class="section full-image" style="background-image: url(img/main.jpg)">
@@ -56,7 +84,7 @@
 					</div>
 				</div>
 			</section>
-			<section id="about" data-anchor="about-section" class="section full-image" style="background-image: url(img/about-bg.jpg);">
+			<section id="about" data-anchor="about-section" class="section full-image" style="background-image: url(img/bg.jpg);">
 				<div class="container">
 					<h1 class="header">{{about.label}}</h1>
 					<div class="md flow-text">
@@ -64,27 +92,27 @@
 					</div>
 				</div>
 			</section>
-			<section id="works" data-anchor="works-section" class="section full-image" style="background-image: url(img/about-bg.jpg);">
+			<section id="works" data-anchor="works-section" class="section full-image" style="background-image: url(img/bg.jpg);">
 				<div class="container">
 					<h1 class="header">{{works.label}}</h1>
 					<div class="owl-carousel">
-						{{#works.company}}
+						{{#works.list}}
 							<div class="item company center-align">
 								<img class="circle company-logo" src="{{img}}" alt="{{label}}">
 								<h1 class="company-label center-align">{{label}}</h1>
 								<div class="md company-description">
 									{{#markdown description}}{{/markdown}}
 								</div> 
-								<a class="waves-effect waves-light btn center-align" href="{{link}}">
+								<a class="waves-effect waves-light btn center-align blue lighten-1" href="{{link}}">
 									{{linkLabel}}
 									<i class="material-icons right">open_in_browser</i>
 								</a>
 							</div>
-						{{/works.company}}
+						{{/works.list}}
 					</div>
 				</div>
 			</section>
-			<section id="skills" data-anchor="skills-section" class="section full-image" style="background-image: url(img/about-bg.jpg);">
+			<section id="skills" data-anchor="skills-section" class="section full-image" style="background-image: url(img/bg.jpg);">
 				<div class="container">
 					<h1 class="header">{{skills.label}}</h1>
 					<div class="owl-carousel">
@@ -100,6 +128,24 @@
 					</div>
 				</div>
 			</section>
+			<section id="achievements" data-anchor="achievements-section" class="section full-image" style="background-image: url(img/bg.jpg);">
+				<div class="container">
+					<h1 class="header">{{achievements.label}}</h1>
+					<div class="owl-carousel">
+						{{#achievements.list}}
+							<div class="item achievements center-align">
+								<div class="achievement-cup" style="color: {{color}};">
+									<i class="fa fa-trophy" aria-hidden="true"></i>
+								</div>
+								<h1 class="achievement-label center-align">{{label}}</h1>
+								<div class="md achievement-description">
+									{{#markdown description}}{{/markdown}}
+								</div> 
+							</div>
+						{{/achievements.list}}
+					</div>
+				</div>
+			</section>
 			<section id="projects" data-anchor="projects-section" class="section">
 				<div class="owl-carousel">
 					{{#projects}}
@@ -110,7 +156,7 @@
 								<div class="md flow-text">
 									{{#markdown description}}{{/markdown}}
 								</div>
-								<a class="waves-effect waves-light btn center-align" href="{{link}}">
+								<a class="waves-effect waves-light btn center-align blue lighten-1" href="{{link}}">
 									{{linkLabel}}
 									<i class="material-icons right">open_in_browser</i>
 								</a>
@@ -122,7 +168,9 @@
 		</main>
 	</script>
 
+
 	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/materialize/js/materialize.min.js"></script>
 	<script src="vendor/fullpage/jquery.fullpage.min.js"></script>
 	<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
 	<script src="index.js"></script>

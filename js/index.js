@@ -13,7 +13,7 @@ $(document).ready(function() {
 		var source = $("#template").html();
 		var template = Handlebars.compile(source);
 
-		var d = data[helper.getLocal()] || data.en || data[0];
+		var d = data[helper.getLocal()] || data.ru;
 		$('body').html(template(d));
 
 		$(".button-collapse").sideNav({
