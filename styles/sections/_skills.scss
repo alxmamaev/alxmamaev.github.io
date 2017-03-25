@@ -1,0 +1,30 @@
+#skills {
+	padding: 0;
+
+	.owl-carousel {
+		width: 90%;
+   		margin: auto;
+
+   		.owl-stage {
+   			margin: auto;
+   		}
+
+		.skill {
+			width: 100px;
+
+			img {
+				display: block;
+    			margin: auto;
+			    border: 2px solid rgb(84, 163, 255);
+			    border-radius: 50%;
+			    width: 90%;
+			    padding: 25px;
+			}
+			h1 {
+				font-size: 1.3em;
+		   		font-weight: 300;
+				margin: 12px;
+			}
+		}
+	}
+}

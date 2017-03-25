@@ -1,0 +1,46 @@
+#projects {
+	.fp-tableCell {
+		display: block;
+	}
+
+	p {
+		color: #434343;
+		font-size: 1em !important;
+	}
+	h1 {
+		color: #434343;
+		font-weight: 200;
+		text-align: left;
+	}
+	
+	.full-image {
+	    width: 100%;
+    	height: 400px;
+
+    	@media #{$small-and-down} {
+			height: 200px;
+		}
+    	@media #{$medium-and-down} {
+			height: 300px;
+		}
+	}
+
+	.project {
+		width: 100%;
+		height: 100%;
+	}
+	.indicator-item {
+		background-color: $main-color;
+		transition: .5s all; 
+
+		&.active {
+			width: 12px;
+			height: 12px;
+			background-color: $accent-color;
+		}
+
+		@media #{$small-and-down} {
+			display: none;
+		}
+	}
+}
