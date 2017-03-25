@@ -6,6 +6,10 @@ Handlebars.registerHelper("markdown", function(array, sep, options) {
 	var s = array.join('\n');
 	return marked(s);
 });
+Handlebars.registerHelper("size", function(desktop, mobile, options) {
+	if(window.innerWidth > 600) return desktop; 
+	else return mobile
+});
 
 $(document).ready(function() {
 	$.getJSON('./data.json', function(data) {
@@ -15,11 +19,6 @@ $(document).ready(function() {
 
 		var d = data[helper.getLocal()] || data.ru;
 		$('body').html(template(d));
-
-		$(".button-collapse").sideNav({
-			closeOnClick: true,
-			draggable: true
-		});
 
 		$('#fullpage').fullpage({
 			//Navigation
@@ -38,9 +37,7 @@ $(document).ready(function() {
 
 			//Design
 			verticalCentered: true,
-			responsiveWidth: 0,
-			responsiveHeight: 0,
-			responsiveSlides: false
+			responsiveWidth: 600
 		});
 		
 		$('#works .owl-carousel').owlCarousel({

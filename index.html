@@ -15,52 +15,26 @@
 </head>
 <body>
 	<script id="template" type="text/x-handlebars-template">
-		<ul id="menu" class="tabs row">
-			<li class="col s2 tab hide-on-med-and-up">
-				<a href="#" data-activates="slide-out" class="button-collapse">
-					<i class="material-icons">menu</i>
-				</a>
-			</li>
-			<li data-menuanchor="main-section" class="tab col s2 active hide-on-small-only">
+		<ul id="menu" class="tabs row hide-on-small-only">
+			<li data-menuanchor="main-section" class="tab col s2 active">
 				<a href="#main-section" class="waves-effect">{{menu.[0]}}</a>
 			</li>
-			<li data-menuanchor="about-section" class="tab col s2 hide-on-small-only">
+			<li data-menuanchor="about-section" class="tab col s2">
 				<a href="#about-section" class="waves-effect">{{menu.[1]}}</a>
 			</li>
-			<li data-menuanchor="works-section" class="tab col s2 hide-on-small-only">
+			<li data-menuanchor="works-section" class="tab col s2">
 				<a href="#works-section" class="waves-effect">{{menu.[2]}}</a>
 			</li>
-			<li data-menuanchor="skills-section" class="tab col s2 hide-on-small-only">
+			<li data-menuanchor="skills-section" class="tab col s2">
 				<a href="#skills-section" class="waves-effect">{{menu.[3]}}</a>
 			</li>
-			<li data-menuanchor="achievements-section" class="tab col s2 hide-on-small-only">
+			<li data-menuanchor="achievements-section" class="tab col s2">
 				<a href="#achievements-section" class="waves-effect">{{menu.[4]}}</a>
 			</li>
-			<li data-menuanchor="projects-section" class="tab col s2 hide-on-small-only">
+			<li data-menuanchor="projects-section" class="tab col s2">
 				<a href="#projects-section" class="waves-effect">{{menu.[5]}}</a>
 			</li>
 		</ul>
-			
-		<ul id="slide-out" class="side-nav">
-			<li data-menuanchor="main-section">
-				<a href="#main-section" class="waves-effect">{{menu.[0]}}</a>
-			</li>
-			<li data-menuanchor="about-section">
-				<a href="#about-section" class="waves-effect">{{menu.[1]}}</a>
-			</li>
-			<li data-menuanchor="works-section">
-				<a href="#works-section" class="waves-effect">{{menu.[2]}}</a>
-			</li>
-			<li data-menuanchor="skills-section">
-				<a href="#skills-section" class="waves-effect">{{menu.[3]}}</a>
-			</li>
-			<li data-menuanchor="achievements-section">
-				<a href="#achievements-section" class="waves-effect">{{menu.[4]}}</a>
-			</li>
-			<li data-menuanchor="projects-section">
-				<a href="#projects-section" class="waves-effect">{{menu.[5]}}</a>
-			</li>
-	    </ul>
 
 		<main id="fullpage">
 			<section id="main" data-anchor="main-section" class="section full-image" style="background-image: url(img/main.jpg)">
@@ -150,7 +124,7 @@
 				<div class="owl-carousel">
 					{{#projects}}
 						<div class="item project" href="project-{{@index}}">
-							<div class="full-image" style="background-image: url({{img}});"></div>
+							<div class="full-image" style="background-image: url({{#size desktop mobile}}{{/size}});"></div>
 							<div class="container">
 								<h1 class="header">{{label}}</h1>
 								<div class="md flow-text">
@@ -170,7 +144,6 @@
 
 
 	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/materialize/js/materialize.min.js"></script>
 	<script src="vendor/fullpage/jquery.fullpage.min.js"></script>
 	<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
 	<script src="index.js"></script>
