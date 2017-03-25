@@ -48,7 +48,7 @@
 		},
 		"works": {
 			"label": "ОПЫТ РАБОТЫ",
-			"company": [
+			"list": [
 				{
 					"img": "img/sheldon.jpg",
 					"label": "Sheldon AI",
