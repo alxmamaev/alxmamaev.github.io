@@ -1,57 +1,50 @@
 #projects {
+	padding-top: 0;
+
 	.fp-tableCell {
 		display: block;
-	}
-
-	p {
-		color: #434343;
-		font-size: 1em !important;
-	}
-	h1 {
-		color: #434343;
-		font-weight: 200;
-		text-align: left;
-	}
-	
-	.full-image {
-	    width: 100%;
-    	height: 300px;
-
-    	@media #{$small-and-down} {
-			height: 200px;
-		}
-    	@media #{$medium-and-down} {
-			height: 300px;
-		}
 	}
 
 	.project {
 		width: 100%;
 		height: 100%;
+		margin-top: 0;
 
-		.md {
-			font-size: 1.5em;
+		.card-content {
+			margin: -10px auto;
+			width: 70%;
 
-			@media #{$small-and-down} {
-				font-size: 0.5em;
-			}
 	    	@media #{$medium-and-down} {
-				font-size: 1.3em;
+				width: 85%;
+			}
+			@media #{$small-and-down} {
+				width: 100%;
+			}
+
+			.card-title {
+				font-size: 1.7em; 
+				margin-bottom: 30px;
+
+		    	@media #{$medium-and-down} {
+					font-size: 1.5em;
+					margin-bottom: 20px;
+				}
+				@media #{$small-and-down} {
+					font-size: 1.4em;
+					margin-bottom: 10px;
+				}
 			}
 		}
-	}
-	.indicator-item {
-		background-color: $main-color;
-		transition: .5s all; 
+		.card-action {
+			width: 70%;
+			margin: auto;
 
-		&.active {
-			width: 12px;
-			height: 12px;
-			background-color: $accent-color;
-		}
-
-		@media #{$small-and-down} {
-			display: none;
+	    	@media #{$medium-and-down} {
+				width: 85%;
+			}
+			@media #{$small-and-down} {
+				width: 100%;
+			}
 		}
 	}
 }

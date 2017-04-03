@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="vendor/owl.carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendor/owl.carousel/owl.theme.default.min.css">
 	<link rel="stylesheet" href="vendor/fullpage/jquery.fullpage.min.css">
 	<link rel="stylesheet" href="vendor/materialize/css/materialize.min.css">
 	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
@@ -69,7 +70,7 @@
 			<section id="works" data-anchor="works-section" class="section full-image" style="background-image: url(img/bg.jpg);">
 				<div class="container">
 					<h1 class="header">{{works.label}}</h1>
-					<div class="owl-carousel">
+					<div class="owl-carousel owl-theme">
 						{{#works.list}}
 							<div class="item company center-align">
 								<img class="circle company-logo" src="{{img}}" alt="{{label}}">
@@ -89,7 +90,7 @@
 			<section id="skills" data-anchor="skills-section" class="section full-image" style="background-image: url(img/bg.jpg);">
 				<div class="container">
 					<h1 class="header">{{skills.label}}</h1>
-					<div class="owl-carousel">
+					<div class="owl-carousel owl-theme">
 						{{#skills.list}}
 							<div class="item skill center-align">
 								<img src="{{img}}" alt="{{label}}">	
@@ -105,7 +106,7 @@
 			<section id="achievements" data-anchor="achievements-section" class="section full-image" style="background-image: url(img/bg.jpg);">
 				<div class="container">
 					<h1 class="header">{{achievements.label}}</h1>
-					<div class="owl-carousel">
+					<div class="owl-carousel owl-theme">
 						{{#achievements.list}}
 							<div class="item achievements center-align">
 								<div class="achievement-cup" style="color: {{color}};">
@@ -121,21 +122,22 @@
 				</div>
 			</section>
 			<section id="projects" data-anchor="projects-section" class="section">
-				<div class="owl-carousel">
+				<div class="owl-carousel owl-theme">
 					{{#projects}}
-						<div class="item project" href="project-{{@index}}">
-							<div class="full-image" style="background-image: url({{#size desktop mobile}}{{/size}});"></div>
-							<div class="container">
-								<h1 class="header">{{label}}</h1>
-								<div class="md flow-text">
-									{{#markdown description}}{{/markdown}}
-								</div>
-								<a class="waves-effect waves-light btn center-align blue lighten-1" href="{{link}}">
-									{{linkLabel}}
-									<i class="material-icons right">open_in_browser</i>
-								</a>
-							</div>
-						</div>
+						<div class="item project card z-depth-0">
+				            <div class="card-image">
+				              <img src="{{#size desktop mobile}}{{/size}}">
+				            </div>
+				            <div class="card-content flow-text">
+				              <h1 class="card-title">{{label}}</h1>
+				              <p>{{#markdown description}}{{/markdown}}</p>
+				            </div>
+				            <div class="card-action flow-text">
+					            <a href="{{link}}" class="blue-text waves-effect waves-light">
+					            	{{linkLabel}}
+					            </a>
+				            </div>
+				        </div>
 					{{/projects}}
 				</div>
 			</section>
@@ -146,6 +148,7 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/fullpage/jquery.fullpage.min.js"></script>
 	<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="vendor/materialize/js/materialize.min.js"></script>
 	<script src="index.js"></script>
 </body>
 </html>

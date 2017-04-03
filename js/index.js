@@ -22,7 +22,13 @@ $(document).ready(function() {
 
 		$('#fullpage').fullpage({
 			//Navigation
-			menu: '#menu',
+	        menu: '#menu',
+	        lockAnchors: false,
+	        navigation: false,
+	        navigationPosition: 'right',
+	        showActiveTooltip: false,
+	        slidesNavigation: false,
+	        slidesNavPosition: 'bottom',
 
 			//Scrolling
 			css3: true,
@@ -62,10 +68,11 @@ $(document).ready(function() {
 		});
 		$('#skills .owl-carousel').owlCarousel({
 			autoWidth: true,
+			center:true,
 			responsive:{
 				0: {
 					items: 2,
-					center:true
+					center: false
 				},
 				600: {
 					center: false,
