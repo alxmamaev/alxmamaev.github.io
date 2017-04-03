@@ -103,6 +103,10 @@
 					"label": "Redis"
 				},
 				{
+					"img": "img/tarantool.jpg",
+					"label": "Tarantool"
+				},
+				{
 					"img": "img/bot.jpg",
 					"label": "Chatbots"
 				}
@@ -118,20 +122,48 @@
 			]
 		},
 		"achievements": {
-			"label": "MY ACHIEVEMENTS:",
+			"label": "МОИ ДОСТИЖЕНИЯ:",
 			"list": [
 				{
-					"label": "Хиккатон №99",
-					"color": "#54A3FF",
+					"label": "OpenData Hackathon74",
+					"color": "#ffd700",
 					"description": [
-						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+						"Хакатон по открытым данным в Челябинской области, проходивший при поддержке МинИнфо и IT-Park 7. Участники за два дня разработали продукт основанный на открытых данных РФ."
 					]
 				},
 				{
-					"label": "Хиккатон №99",
-					"color": "#ccc",
+					"label": "Аэрокосмическая олимпиада",
+					"color": "#c0c0c0",
 					"description": [
-						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus neque iusto sapiente. Maxime blanditiis vel vitae non cumque, voluptatum!"
+						"Выставка инженерных научных работ множества направлений, организованная аэрокосмическим факультетом ЮУрГУ."
+					]
+				},
+				{
+					"label": "Шаг в будущее",
+					"color": "#cd7f32",
+					"description": [
+						"Всероссийский конкурс научно-исследовательских работ различной направленности, программа существует более двадцати лет. Заключительный этап проходит в Москве.1"
+					]
+				},
+				{
+					"label": "Dodo Pizza DataHackathon",
+					"color": "#cd7f32",
+					"description": [
+						"Хакатон по анализу данных и машинному обучению от компании Додо-пицца. Участникам было необходимо предсказать продажи компании на следующий месяц"
+					]
+				},
+				{
+					"label": "Балтийский Научно-Инженерный конкурс",
+					"color": "#cd7f32",
+					"description": [
+						"Всероссийская выставка инженерных работ в области программирования, робототехники, физики и другого. Проводится при поддержке крупныых росскийских компаний и университета ИТМО."
+					]
+				},
+				{
+					"label": "Уральская командная олимпиада школьников",
+					"color": "#cd7f32",
+					"description": [
+						"Уральская олипиада по программированию, организованная университетом УрФУ при поддержке СКБ-Контур, Яндекс, Naumen."
 					]
 				}
 			]
