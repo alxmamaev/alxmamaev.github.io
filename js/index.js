@@ -48,6 +48,7 @@ $(document).ready(function() {
 		
 		$('#works .owl-carousel').owlCarousel({
 			loop:true,
+			dots: true,
 			margin: 20,
 			responsive:{
 				0: {
@@ -68,6 +69,7 @@ $(document).ready(function() {
 		});
 		$('#skills .owl-carousel').owlCarousel({
 			autoWidth: true,
+			dots: true,
 			center:true,
 			responsive:{
 				0: {
@@ -91,6 +93,7 @@ $(document).ready(function() {
 		});
 		$('#projects .owl-carousel').owlCarousel({
 			loop:true,
+			dots: true,
 			responsive:{
 				0: {
 					items: 1
@@ -99,6 +102,7 @@ $(document).ready(function() {
 		});
 		$('#achievements .owl-carousel').owlCarousel({
 			loop:true,
+			dots: true,
 			margin: 20,
 			responsive:{
 				0: {

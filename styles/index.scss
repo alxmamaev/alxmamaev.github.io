@@ -7,3 +7,9 @@
 @import './sections/skills';
 @import './sections/achievements';
 @import './sections/projects';
+
+body {
+	background: url('img/bg.jpg');
+	background-position: center;
+	background-size: cover;
+}
