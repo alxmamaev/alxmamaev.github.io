@@ -36,6 +36,7 @@ $(document).ready(function() {
 			easing: 'easeInOutCubic',
 			easingcss3: 'ease',
 			fadingEffect: true,
+			touchSensitivity: 30,
 
 			//Accessibility
 			keyboardScrolling: true,
