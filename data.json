@@ -179,16 +179,6 @@
 				"link": "github",
 				"linkLabel": "https://github.com/alxmamaev/escv"
 			},
-			//{
-			//	"desktop": "img/leonardo.png",
-			//	"mobile": "img/doglang.png",
-			//	"label": "Leonard Bot - Sheldon AI",
-			//	"description": [
-			//		"**Leonard Bot** - Виртуальный ассистент внутри вашего мессенджера. Представьте себе виртуального ассистента, который может: предупрежадать о погоде, показывать последние новости или мемы, вызывать такси, искать интересные места, редактировать фотографии нейронными сетями. Все это - *Леонард*."
-			//	],
-			//	"link": "github",
-			//	"linkLabel": "TELEGRAM"
-			//},
 			{
 				"desktop": "img/doglang.png",
 				"mobile": "img/doglang.png",
