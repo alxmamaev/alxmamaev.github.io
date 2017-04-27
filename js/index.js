@@ -44,7 +44,12 @@ $(document).ready(function() {
 
 			//Design
 			verticalCentered: true,
-			responsiveWidth: 600
+			responsiveWidth: 600,
+
+			onLeave: function(index, nextIndex, direction) {
+				if(direction === 'up') $('#menu').show();
+				else $('#menu').hide();
+			}
 		});
 		
 		$('#works .owl-carousel').owlCarousel({
