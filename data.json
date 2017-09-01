@@ -184,8 +184,27 @@
 				],
 				"link": "https://github.com/alxmamaev/doglang",
 				"linkLabel": "github"
+			},
+			{
+				"desktop": "img/oas.png",
+				"mobile": "img/oas.png",
+				"label": "Чат-Бот Областного Аптечного Склада",
+				"description": [
+					"**@apteka74rubot** - Telegram бот для просмотра каталога товаров, акций, а так же просмотра бонусов на карте областного аптечного склада.\n"
+				],
+				"link": "https://t.me/apteka74rubot",
+				"linkLabel": "Telegram"
+			},
+			{
+				"desktop": "img/trains.png",
+				"mobile": "img/trains.png",
+				"label": "Чат-Бот Яндекс.Электрички",
+				"description": [
+					"**@YaTrainBot** - Telegram бот для просмотра рейсов электричек между станциями, времени отправки, маршрут движения.\n"
+				],
+				"link": "https://t.me/YaTrainBot",
+				"linkLabel": "Telegram"
 			}
-			
 		]
 	}
 }
