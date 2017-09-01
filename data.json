@@ -75,6 +75,15 @@
 					],
 					"linkLabel": "ОФИЦИАЛЬНЫЙ САЙТ",
 					"link": "http://napoleonit.ru/"
+				},
+				{
+					"img": "img/is74.jpg",
+					"label": "Интерсвязь",
+					"description": [
+						"Крупнейший уральский интернет провайдер, внутри технического отдела компании решается множество задач в сфере Machine Learning и Big Data."
+					],
+					"linkLabel": "ОФИЦИАЛЬНЫЙ САЙТ",
+					"link": "http://napoleonit.ru/"
 				}
 			]
 		},
