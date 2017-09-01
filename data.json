@@ -50,24 +50,6 @@
 			"label": "ОПЫТ РАБОТЫ",
 			"list": [
 				{
-					"img": "img/sheldon.jpg",
-					"label": "Sheldon AI",
-					"description": [
-						"Sheldon AI - Cтартап, суть которого во внедрении AI в ежедневную жизнь людей. Здесь я занимаюсь непосредственно разработкой продуктов компании.            \n"
-					],
-					"linkLabel": "ОФИЦИАЛЬНЫЙ САЙТ",
-					"link": "http://sheldon.ai"
-				},
-				{
-					"img": "img/iotlab.jpg",
-					"label": "IoT-Lab",
-					"description": [
-						"IoT Lab - Открытая школа для студентов по разработке умных устройств интенета вещей, в которой я преподавал с августа по декабрь 2016 года.      "
-					],
-					"linkLabel": "ВКОНТАКТЕ",
-					"link": "https://vk.com/iotlaboratory"
-				},
-				{
 					"img": "img/napoleonit.jpg",
 					"label": "Наполеон IT",
 					"description": [
@@ -84,6 +66,24 @@
 					],
 					"linkLabel": "ОФИЦИАЛЬНЫЙ САЙТ",
 					"link": "http://napoleonit.ru/"
+				},
+				{
+					"img": "img/sheldon.jpg",
+					"label": "Sheldon AI",
+					"description": [
+						"Sheldon AI - Cтартап, суть которого во внедрении AI в ежедневную жизнь людей. Здесь я занимаюсь непосредственно разработкой продуктов компании.            \n"
+					],
+					"linkLabel": "ОФИЦИАЛЬНЫЙ САЙТ",
+					"link": "http://sheldon.ai"
+				},
+				{
+					"img": "img/iotlab.jpg",
+					"label": "IoT-Lab",
+					"description": [
+						"IoT Lab - Открытая школа для студентов по разработке умных устройств интенета вещей, в которой я преподавал с августа по декабрь 2016 года.      "
+					],
+					"linkLabel": "ВКОНТАКТЕ",
+					"link": "https://vk.com/iotlaboratory"
 				}
 			]
 		},
