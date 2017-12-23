@@ -176,6 +176,16 @@
 		},
 		"projects": [
 			{
+				"desktop": "img/donatelo.jpg",
+				"mobile": "img/donatelo.jpg",
+				"label": "Donatelo",
+				"description": [
+					"Donatelo — приложение-конструктор динамических обложек для сообществ ВКонтакте. На данном этапе присутствуют готовые виджеты и несколько сервисов. Можно настроить отображение случайного комментария, последнего подписчика и других данных. "
+				],
+				"link": "https://vk.com/donatelo_app",
+				"linkLabel": "donatelo"
+			},
+			{
 				"desktop": "img/escv.png",
 				"mobile": "img/escv.png",
 				"label": "Электронная система учета посетителей",
