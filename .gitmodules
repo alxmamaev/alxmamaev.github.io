@@ -1,0 +1,3 @@
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = git@github.com:alxmamaev/PaperMod.git
