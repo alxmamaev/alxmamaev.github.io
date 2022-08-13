@@ -1,0 +1,31 @@
+baseURL: "https://alxmamaev.me"
+languageCode: "en-us"
+title: "Alex Blog"
+theme: "PaperMod"
+enableEmoji: true
+
+params:
+  profileMode:
+      enabled: true # needs to be explicitly set
+      title: "Alexander Mamaev"
+      subtitle: "**Machine Learning software engineer** \n\n Specialize in **speech-technology** and **model deployment** \n\n Python / Go / C++\n\n *Currently based in Georgia* :georgia:"
+      buttons:
+        - name: Blog
+          url: /posts 
+        - name: CV 
+          url: https://drive.google.com/file/d/1Fqs163i_fKcveoKzJ9_bryKECsvaCgqU/view?usp=sharing 
+
+  socialIcons:
+    - name: github 
+      url: https://github.com/alxmamaev
+    - name: leetcode
+      url: https://leetcode.com/alxmamaev/
+    - name: telegram 
+      url: https://t.me/alxmamaev
+    - name: instagram
+      url: https://www.instagram.com/alxmamaev/
+    - name: linkedin 
+      url: https://www.linkedin.com/in/alxmamaev/
+    - name: email
+      url: mailto:hi@alxmamaev.me
+
