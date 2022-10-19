@@ -229,13 +229,40 @@ So, now we have a converted TorchScript model which we can run on some server. W
 
 # Triton server
 
+Before we start setuping triton server, let's talk about what we not just using something, that we already know like **Flask**. So, the reason is simple - performance. Flask - created to process simple web-sited, like blogs, news feed and other modern web pages. 
+
+We need something completly different - we does not need process forms, render html and return them with a static content, we need to able process a **tensors**, fast recive them from user, grouping them in a batch, process and fast return the model output. 
+
+**Triton Server** may able to do that out of the box:
+* **Working with tensors** -- the base triton datatype is tensor, all interaction with model describing by input-output tensor schema, so we do not need think about how to represent them in requests
+* **Model management** -- triton supports a lot of frameworks for inference, and manage model by them self, we just setupping some config, where indicate which model we need to load, which framework to use, and which gpu to occupy. 
+* **GPRC/HTTP** -- one of the best feature of triton, we does not limited in *http*, we can also use *grpc* which much faster for binary data and better choice for making requests between servers, but if we not able to make requests by grpc (like in web browser), we can use http api as well
+* **Dynamic batching** -- you probbaly already used batching in model training and know, that gpus able to process multiple model inputs at same time, which may help you to improove throughput, triton able to join multiple requests into one batch and process them on gpu
+* **GPU/CPU** -- triton able to inference your model on CPU and GPU, you just need to specify this in your model configs
+* **Custom backends** -- if you need some custom logic, like data preprocessing you able to write in by your own using **Python** or **C++**
+* **Multiple model on the same gpu** -- you may think that is easy to run multiple models on the same GPU using torch, you just create two processes and call models in parallel. That is actually not true, because models does now know anything about each other and will occupy resources as all of gpu in controll of this model. Triton helps with that, using different [Cuda Streams](https://leimao.github.io/blog/CUDA-Stream/) for models instances.
+
+So i think you was enough this arguments to use triton server, lets start!
+
+
+## Prepairing server enviroment
+The first of all we need to create a folder which will contains all our models and their config, i'll name it `model_repository`.
+Inside this folder i created a model folder `sentiment_classifier`, which should contain a config file `config.pbtxt`, we will edit them later. 
 ```bash
 mkdir -p model_repository/sentiment_classifier
 touch model_repository/sentiment_classifier/config.pbtxt
+```
 
+Then lets create a folder with name `1` inside model directory and put **TorchScript** traced model inside of that.
+
+`1` is not a random number this is actually a version of out model, triton have a version controll system for models, we will not use this at first time, so we will just use *version 1*. 
+
+```bash
 mkdir -p model_repository/sentiment_classifier/1 
 cp traced_sentiment_classifier.pt model_repository/sentiment_classifier/1/model.pt
 ```
+
+So for now `model_repository` file-structure looks that:
 
 ```
 model_repository
@@ -244,6 +271,14 @@ model_repository
     │   └── model.pt
     └── config.pbtxt
 ```
+
+All triton models repository must have the same structure, every model have a separate folder which contains a `config.pbtxt` and at least one directory with a model.
+
+Let's edit a config.pbtxt, this config explains to triton what is out model actually is, what is it name, which framework it used *(Pytorch/Tensorflow/ONNX or other)* which inputs and outputs it have and some information about inference device.
+
+Triton uses [Protobuf Text Format](https://developers.google.com/protocol-buffers/docs/text-format-spec) `.pbtxt` for the model configs, it is simillar to JSON but have little bit different syntax.
+
+So, lets dive in. This is example of config for the `sentiment_classifier` model.
 
 ```protobuf
 name: "sentiment_classifier"
@@ -271,15 +306,39 @@ output [
 ]
 ```
 
+Lets me explain it line-by-line:
+* In the first line we are set a **name** for the model, the name of dirrectory and name in this field must be the same. `sentiment_classifier` -- in out case.
+* **backend** - which backend will be used to load this model, list of avaliable backends you can find here. You can find avaliable backends for triton [here](https://github.com/triton-inference-server/backend/blob/main/README.md#where-can-i-find-all-the-backends-that-are-available-for-triton). Also you able to write your own backend for your specific task.
+* **max_batch_size** - the maximum batch size which our model will be handle. We set them to *1* because we will not talk about batch inference in this tutorial. More about dynamic batching you will know in the next articles.
+* **inputs** - there are we are describing inputs for the model. Our classifier has a two inputs: input tokens and attention mask, which described here in list of two elements. Each of this elements contains:
+    * **name** - the name of inputs, for PyTorch backend its names just byt index `INPUT__{i}` *(yeah duble ubder dash is used)*.
+    * **data_type** - which type of data this inputs get. So we have a *tokens tensors* and *attention mask* both of them is tensors of long ints (int64).
+    * **dims** - it is actual shape of the model, but we are omit batch dimention, because triton handle them by own. If we have some static dimention we just using size of this dimention, for example dimentions for input *3-channels 512-size* image looks that: `[3, 512, 512]`. In our case we just have a sequence of ints without specific size, so we set a `-1` as dimention size, which means that first dimention *(exclude batch)* beging dynamic.
+
+* **outputs** - completly the same as inputs, exlude that output has different `data_type`, because our outputs is logits, and `dims` has size `3` because we predict probabilitu of this text for this 3 classes.
+
+Thats all minimal config. Lets run the server 🚀
+
+## Building docker
+
+As before we are creating the docker file for triton server. For now it's just contains an import of base triton-image without any additional commands. We will add dependencies other later. 
+
+But for now it's simplest docker file ever 🤪
+
 ```dockerfile
 FROM nvcr.io/nvidia/tritonserver:22.07-pyt-python-py3 
 
 # We will add other dependencies here
 ```
 
+Lets build it 🔨
+
 ```bash
 docker build . -f docker/triton.Dockerfile -t tritonserver:latest
 ```
+
+## Running Triton container
+`Tip: run this command from the project directory`
 ```bash
 docker run \
     -p 8000:8000 -p 8001:8001 -p 8002:8002 \
@@ -287,6 +346,16 @@ docker run \
     tritonserver:latest \
     tritonserver --model-repository /model_repository
 ```
+Running the triton docker is simple, we just specify some flags here:
+* `-p` - we are **forwards some ports** from docker container to outside, to be able make request outside of the container.
+    * Port **8001** - used for GRPC connections
+    * Port **8000** - used for HTTP connections
+    * Port **8002** - used for metrics outputs, powered by [prometheus](https://prometheus.io).
+* `-v` - this flag ables to **share** the `model_repository` dirrectory into the conteiner. It's being able by `/model_repository` path.
+* `tritonserver:latest` - name of the container which we are using
+* `tritonserver --model-repository /model_repository` - command which being executed inside container. This command **runs triton server** and specify a path to the model_repository. 
+
+After running you will see this output:
 
 ```
 I0825 20:47:37.672667 1 server.cc:586]
@@ -374,6 +443,8 @@ touch client/client.py
 touch docker/client.Dockerfile
 ```
 
+
+## Client code
 ```
 from argparse import ArgumentParser
 import numpy as np
@@ -421,6 +492,8 @@ if __name__ == "__main__":
     main(args)
 ```
 
+
+## Runing client 
 ```
 docker build . -f docker/client.Dockerfile -t tritonclient:latest
 ```
@@ -437,7 +510,7 @@ Downloading special_tokens_map.json: 100%|██████████| 150/15
 Predict: positive
 ```
 
-Simple improovment
+Simple improvement
 ```dockerfile
 RUN python3 -c 'from transformers import AutoTokenizer; \
 AutoTokenizer.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")'
@@ -451,3 +524,5 @@ Output:
 ```
 Predict: positive
 ```
+
+## Running on GPU
