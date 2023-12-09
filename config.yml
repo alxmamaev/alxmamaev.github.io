@@ -8,7 +8,7 @@ params:
   profileMode:
       enabled: true # needs to be explicitly set
       title: "Alexander Mamaev"
-      subtitle: "**Machine Learning software engineer** \n\n Specialize in **speech-technology** and **model deployment** \n\n Python / Go / C++\n\n *Currently based in Georgia* :georgia:"
+      subtitle: "**Machine Learning software engineer** \n\n Specialize in **speech-technology** and **model deployment** \n\n Python / Go / C++\n\n *Currently based in UK* :uk:"
       buttons:
         - name: Blog
           url: /posts 
